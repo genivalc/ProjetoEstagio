@@ -6,6 +6,9 @@
 package application;
 
 import entities.Produto;
+import mode.dao.DaoFactory;
+import mode.dao.ProdutoDao;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
@@ -42,21 +45,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
         leitorProduto f = new leitorProduto();
         try {
             PRODUTOS = f.lerProdutos("D:\\produtos.txt");
+            
             criaBotoes(PRODUTOS);
+            
+           
+            
         } catch (IOException ex) {
             Logger.getLogger(TelaSecundaria.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
 
     public void criaBotoes(ArrayList<Produto> produtos) {
         Principal.removeAll();
 
-        // Principal.setLayout(new FlowLayout(FlowLayout.CENTER));
-        //Principal.setAlignmentY(CENTER_ALIGNMENT);
-        JLabel imagem = new JLabel();
-         imagem.setIcon(new javax.swing.ImageIcon("D:\boiforte.jpg"));
-                 // jLabel1.setIcon(new javax.swing.ImageIcon("C:\Estoque\imagem\logo.jpg"));
-        Principal.add(imagem);
         try {
 
             int cont = 1;
@@ -68,7 +70,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
             int aux = 2;
             // JButton button = null;
             for (Produto produto : produtos) {
-
+            
+                		 
+                		 
+                		 
+                		 
+                		 
+                		 
+                		 
+                		 
                 final JButton button = new JButton(produto.getNome());
                 // final JButton button = new JButton(produto.nome);// modificar
 
